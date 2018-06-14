@@ -1,0 +1,49 @@
+@import 'mixins';
+
+html, *
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body 
+{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+button
+{
+    background-color: transparent;
+    border: none;
+    padding: 0.3rem;
+    cursor: pointer;
+    outline-width: 0;
+}
+
+.overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    //@include gradient(bottom, top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    background-color: black;
+    transition: opacity 300ms linear;
+    z-index: 1;
+}
+
+.overlay_open
+{
+    opacity: 0.3;
+}
+
+.overlay_closed
+{
+    opacity: 0;
+}
